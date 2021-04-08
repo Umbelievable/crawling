@@ -90,7 +90,10 @@ for j in range(0, 9):  # 카테고리 별 상품 개수 for문임 (bed는 9개�
             print(result)
 
             data = pd.DataFrame(result)
+            
+            #bedcate_no 열 이름 카테고리마다 kitchencate_no, librarycate_no, livingcate_no, storagecate_no로 수정바람
             data.columns = ['review_no','star', 'review', 'customerId', 'reviewDate','pd_no','bedcate_no','category_no']
+            
 
             ####파일 이름 수정
             filename = 'reviews/bed/bed' + str(j) + "-review" + str(a) + ".csv"
